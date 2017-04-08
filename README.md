@@ -15,8 +15,8 @@ WARNING: This library should be considered *PRE-BETA* software - the API can and
 
 ### Supported Platform
 
-* NET Framework 4.5+
-* NET Standard 1.3+ (including .NET Core, Xamarin and others)
+* .NET Framework 4.5+
+* .NET Standard 1.3+ (including .NET Core, Xamarin and others)
 
 
 ### Installation
