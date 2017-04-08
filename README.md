@@ -45,7 +45,7 @@ public interface ITestJsonRpcService
 }
 ```
 
-### Step 2: Call your JSON-RPC using dynamic proxy approach:
+### Step 2: Call your JSON-RPC using a dynamic proxy approach:
 
 ```csharp
 var settings = new Settings(); //Use default settings
