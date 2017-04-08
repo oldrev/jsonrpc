@@ -13,6 +13,12 @@ WARNING: This library should be considered *PRE-BETA* software - the API can and
 
 * Visual Studio 2017: This project is written in C# 7.0 using Microsoft Visual Studio 2017 Community Edition.
 
+### Supported Platform
+
+* NET Framework 4.5+
+* NET Standard 1.3+ (including .NET Core, Xamarin and others)
+
+
 ### Installation
 
 Sandwych.JsonRpc can be installed from [NuGet](https://www.nuget.org/packages/Sandwych.JsonRpc
