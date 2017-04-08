@@ -1,7 +1,7 @@
 # Sandwych.JsonRpc: A JSON-RPC Client For .NET
 
 [![NuGet Stats](https://img.shields.io/nuget/v/Sandwych.JsonRpc.svg)](https://www.nuget.org/packages/Sandwych.JsonRpc) 
-[![Build status](https://ci.appveyor.com/api/projects/status/github}/oldrev/jsonrpc)(https://ci.appveyor.com/project/oldrev/jsonrpc/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/github}/oldrev/jsonrpc)(https://ci.appveyor.com/project/oldrev/jsonrpc/branch/master)]
 
 Sandwych.JsonRpc is a JSON-RPC protocol client for .NET.
 
