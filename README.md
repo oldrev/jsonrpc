@@ -21,7 +21,7 @@ WARNING: This library should be considered *PRE-BETA* software - the API can and
 
 ### Installation
 
-Sandwych.JsonRpc can be installed from [NuGet](https://www.nuget.org/packages/Sandwych.JsonRpc
+Sandwych.JsonRpc can be installed from [NuGet](https://www.nuget.org/packages/Sandwych.JsonRpc) 
 
 or type following commands in the NuGet Console:
 
