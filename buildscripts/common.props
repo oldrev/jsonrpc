@@ -1,0 +1,68 @@
+<Project>
+	
+	<PropertyGroup>
+		<NoWarn>$(NoWarn);CS1591;CS3014;CS3003;CS3001;CS3021</NoWarn>
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/castleproject/Core</RepositoryUrl>
+		<BuildVersion>0.1.1</BuildVersion>
+		<BuildVersion Condition="'$(APPVEYOR_BUILD_VERSION)'!=''">$(APPVEYOR_BUILD_VERSION)</BuildVersion>
+		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath> 
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<Product>Sandwych.JsonRpc</Product>
+		<Version>$(BuildVersion)</Version>
+		<AssemblyVersion>$(BuildVersion)</AssemblyVersion>
+		<Authors>Wei Li and Contributors</Authors>
+		<PackageLicenseUrl>https://opensource.org/licenses/BSD-3-Clause</PackageLicenseUrl>
+		<PackageProjectUrl>https://github.com/oldrev/jsonrpc</PackageProjectUrl>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<PackageVersion>$(BuildVersion)</PackageVersion>
+		<IncludeSymbols>true</IncludeSymbols>
+		<IncludeSource>false</IncludeSource>
+		<CurrentYear>$([System.DateTime]::Now.ToString("yyyy"))</CurrentYear>
+		<Copyright>Copyright (c) 2004-$(CurrentYear) Wei Li and Contributors</Copyright>
+		<ContentTargetFolders>.</ContentTargetFolders>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<DiagnosticsConstants>DEBUG</DiagnosticsConstants>
+		<NetStandardConstants>TRACE;FEATURE_NETCORE_REFLECTION_API;FEATURE_TEST_SERILOGINTEGRATION</NetStandardConstants>
+		<CommonDesktopClrConstants>TRACE;FEATURE_APPDOMAIN;FEATURE_ASSEMBLYBUILDER_SAVE;FEATURE_BINDINGLIST;FEATURE_DICTIONARYADAPTER_XML;FEATURE_EMIT_CUSTOMMODIFIERS;FEATURE_EVENTLOG;FEATURE_GAC;FEATURE_GET_REFERENCED_ASSEMBLIES;FEATURE_IDATAERRORINFO;FEATURE_ISUPPORTINITIALIZE;FEATURE_LISTSORT;FEATURE_REMOTING;FEATURE_SECURITY_PERMISSIONS;FEATURE_SERIALIZATION;FEATURE_SMTP;FEATURE_SYSTEM_CONFIGURATION;FEATURE_TARGETEXCEPTION;FEATURE_TEST_COM;FEATURE_TEST_SERILOGINTEGRATION</CommonDesktopClrConstants>
+		<DesktopClrConstants Condition="'$(OS)'=='Unix'">$(CommonDesktopClrConstants);__MonoCS__</DesktopClrConstants>
+		<DesktopClrConstants Condition="'$(OS)'=='Windows_NT'">$(CommonDesktopClrConstants)</DesktopClrConstants>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(TargetFramework)|$(Configuration)'=='net45|Debug'">
+		<DefineConstants>$(DiagnosticsConstants);$(DesktopClrConstants);DOTNET45;DOTNET40</DefineConstants>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(TargetFramework)|$(Configuration)'=='net45|Release'">
+		<DefineConstants>$(DesktopClrConstants);DOTNET45;DOTNET40;</DefineConstants>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(TargetFramework)|$(Configuration)'=='net461|Debug'">
+		<DefineConstants>$(DiagnosticsConstants);$(DesktopClrConstants);DOTNET45;DOTNET40</DefineConstants>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(TargetFramework)|$(Configuration)'=='net461|Release'">
+		<DefineConstants>$(DesktopClrConstants);DOTNET45;DOTNET40</DefineConstants>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(TargetFramework)|$(Configuration)'=='netstandard1.3|Debug'">
+		<DefineConstants>$(DiagnosticsConstants);$(NetStandardConstants)</DefineConstants>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(TargetFramework)|$(Configuration)'=='netstandard1.3|Release'">
+		<DefineConstants>$(NetStandardConstants)</DefineConstants>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(TargetFramework)|$(Configuration)'=='netcoreapp1.1|Debug'">
+		<DefineConstants>$(DiagnosticsConstants);$(NetStandardConstants)</DefineConstants>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(TargetFramework)|$(Configuration)'=='netcoreapp1.1|Release'">
+		<DefineConstants>$(NetStandardConstants)</DefineConstants>
+	</PropertyGroup>
+
+</Project>
